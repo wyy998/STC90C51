@@ -1,7 +1,7 @@
 #include <reg51.h>
 //#include "delay.h"
 #include "driver.h"
-//#include "bluetooth.h"
+#include "bluetooth.h"
 
 void main()
 {
