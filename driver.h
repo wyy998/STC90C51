@@ -12,9 +12,10 @@ sbit right_con1		=	P0^3;
 sbit right_con2		= P0^4;
 
 void stop();
-void turn_left(unsigned char i);
-void turn_right(unsigned char i);
-void forward(unsigned char i);
-void back(unsigned char i);
+void turn_left();
+void turn_right();
+void forward();
+void back();
+void lock();
 
 #endif
