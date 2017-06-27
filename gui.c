@@ -6,7 +6,7 @@
 //---如果要显示图片就添加这个头文件---//
 #ifdef PICTURE_SHOW
 
-#include"picture.h"
+#include "picture.h"
 
 #endif
 
@@ -18,7 +18,7 @@
 *输  出：
 *功  能：给单个像素涂上颜色。
 ****************************************************************************/	  
-
+/*
 void GUI_Dot(uint x, uint y, uint color)
 {  
 	uchar i;
@@ -27,11 +27,10 @@ void GUI_Dot(uint x, uint y, uint color)
 
 	for(i=0; i<16; i++)
 	{
-		TFT_WriteColorData(color)	;
-		//TFT_WriteData(color);
+		TFT_WriteData(color);
 	}
 }
-
+*/
 ///****************************************************************************
 //*函数名：GUI_Box
 //*输  入：sx：起始X坐标, sy：其实Y坐标, 
@@ -66,7 +65,7 @@ void GUI_Dot(uint x, uint y, uint color)
 *输  出：
 *功  能：画一条直线
 ****************************************************************************/	  
-
+/*
 void GUI_Line(uint xStart, uint yStart, uchar xEnd, uint yEnd, uint color)
 {
 	uint t;  
@@ -134,7 +133,7 @@ void GUI_Line(uint xStart, uint yStart, uchar xEnd, uint yEnd, uint color)
 	    }  
 	}  
 }
-
+*/
 /****************************************************************************
 *函数名：GUI_WriteCnChar 
 *输  入：x：显示起始X坐标
@@ -145,7 +144,7 @@ void GUI_Line(uint xStart, uint yStart, uchar xEnd, uint yEnd, uint color)
 *输  出：
 *功  能：写二号楷体汉字
 ****************************************************************************/	  
-
+/*
 #ifdef CHAR32_SHOW
 
 void GUI_Write32CnChar(uint x, uint y, uchar *cn, uint wordColor, uint backColor)	 
@@ -185,7 +184,7 @@ void GUI_Write32CnChar(uint x, uint y, uchar *cn, uint wordColor, uint backColor
 	}
 }
 #endif
-
+*/
 /****************************************************************************
 *函数名：GUI_WriteEnChar 
 *输  入：x：显示起始X坐标
@@ -300,25 +299,11 @@ void GUI_ShowPicture(uint x, uint y, uchar wide, uint high)
 		temp = pic[tmp + 1];
 		temp = temp << 8;
 		temp = temp | pic[tmp];
-		TFT_WriteData(temp);//逐点显示
+		//TFT_WriteData(~temp);//逐点显示
+		TFT_WriteColorData(temp);
 		tmp += 2;
 	}
 	while(tmp < num);	
 }
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

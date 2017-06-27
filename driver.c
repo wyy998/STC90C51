@@ -1,7 +1,5 @@
 #include <reg51.h>
 #include "driver.h"
-//#include "delay.h"
-
 
 void stop()
 {

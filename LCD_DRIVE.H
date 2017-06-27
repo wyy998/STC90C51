@@ -24,7 +24,7 @@ sbit	    TFT_RS  = P3^2;	  //数据命令选择端
 sbit	    TFT_WR  = P2^5;	  //读写控制
 sbit        TFT_RD  = P2^6;   //读写控制
 
-#define     TFT_DATAPORT  P1  
+#define     TFT_DATAPORT  P0    
 
 //---定义颜色的宏---//
 #define WHITE          0xFFFF
